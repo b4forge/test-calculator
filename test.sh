@@ -10,10 +10,10 @@ check() {
   local result
   result=$("$SCRIPT_DIR/calc.sh" "$@")
   if [[ "$result" == "$expected" ]]; then
-    ((PASS++))
+    PASS=$((PASS + 1))
   else
     echo "FAIL: $* = $result (expected $expected)"
-    ((FAIL++))
+    FAIL=$((FAIL + 1))
   fi
 }
 
