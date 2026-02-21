@@ -11,6 +11,6 @@ case "$OP" in
   +) echo $((NUM1 + NUM2)) ;;
   -) echo $((NUM1 - NUM2)) ;;
   x) echo $((NUM1 * NUM2)) ;;
-  /) echo $((NUM1 / NUM2)) ;;
+  /) if [[ "$NUM2" -eq 0 ]]; then echo "Error: division by zero" >&2; exit 1; fi; echo $((NUM1 / NUM2)) ;;
   *) echo "Unknown operator: $OP" >&2; exit 1 ;;
 esac
