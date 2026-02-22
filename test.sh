@@ -35,8 +35,15 @@ check "10" 20 - 10
 check "42" 6 x 7
 check "3" 10 / 3
 
-# Error handling
+# Error handling — division
 check_error 1 "division by zero" 10 / 0
+
+# Modulo — normal
+check "1" 10 % 3
+check "0" 9 % 3
+
+# Modulo — by zero
+check_error 1 "modulo by zero" 10 % 0
 
 echo "Tests: $PASS passed, $FAIL failed"
 [[ $FAIL -eq 0 ]]
