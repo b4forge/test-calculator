@@ -1,2 +1,5 @@
 *.log
 *.tmp
+
+# Beads issue tracker (local, not committed)
+.beads/
