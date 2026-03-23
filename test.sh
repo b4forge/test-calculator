@@ -34,6 +34,7 @@ check "5" 2 + 3
 check "10" 20 - 10
 check "42" 6 x 7
 check "3" 10 / 3
+check "1024" 2 pow 10
 
 # Error handling
 check_error 1 "division by zero" 10 / 0
