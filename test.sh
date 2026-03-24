@@ -25,7 +25,7 @@ check_error() {
   if [[ "$exit_code" -eq "$expected_exit" && "$result" == *"$expected_stderr"* ]]; then
     PASS=$((PASS + 1))
   else
-    echo "FAIL: $* → exit=$exit_code (expected $expected_exit), output='$result'"
+    echo "FAIL: $* → exit=$exit_code (expected $expected_exit), output=\$result'"
     FAIL=$((FAIL + 1))
   fi
 }
@@ -34,9 +34,11 @@ check "5" 2 + 3
 check "10" 20 - 10
 check "42" 6 x 7
 check "3" 10 / 3
+check "125" 5 cube
 
 # Error handling
 check_error 1 "division by zero" 10 / 0
 
 echo "Tests: $PASS passed, $FAIL failed"
 [[ $FAIL -eq 0 ]]
+
