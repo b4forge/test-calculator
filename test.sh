@@ -36,6 +36,7 @@ check "42" 6 x 7
 check "3" 10 / 3
 check "2" 7 / 3
 check "1024" 2 pow 10
+check "3" 10 min 3
 
 # Factorial
 check "120" fact 5

@@ -26,6 +26,7 @@ else
     x) echo $((NUM1 * NUM2)) ;;
     /) echo $((NUM1 / NUM2)) ;;
     pow) echo $((NUM1 ** NUM2)) ;;
+    min) echo $(( NUM1 < NUM2 ? NUM1 : NUM2 )) ;;
     *) echo "Unknown operator: $OP" >&2; exit 1 ;;
   esac
 fi
