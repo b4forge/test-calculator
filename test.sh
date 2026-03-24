@@ -37,6 +37,11 @@ check "3" 10 / 3
 check "2" 7 / 3
 check "1024" 2 pow 10
 
+# Factorial
+check "120" fact 5
+check "1" fact 0
+check_error 1 "negative" fact -1
+
 # Error handling
 check_error 1 "division by 0" 10 / 0
 
