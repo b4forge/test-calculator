@@ -34,6 +34,8 @@ check "5" 2 + 3
 check "10" 20 - 10
 check "42" 6 x 7
 check "3" 10 / 3
+check "6" 2 modpow 5 13      # 2^5 % 13 = 32 % 13 = 6
+check "1" 3 modpow 2 8       # 3^2 % 8 = 9 % 8 = 1
 
 # Error handling
 check_error 1 "division by zero" 10 / 0
