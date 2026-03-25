@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # calc.sh — Simple integer calculator.
 # Usage: calc.sh <num1> <op> [<num2>]
-# Supported operators: + - x / square cube
+# Supported operators: + - x / square cube average
 # BUG: no division-by-zero check
 # BUG: no modulo support
 set -euo pipefail
@@ -30,6 +30,6 @@ case "$OP" in
       exit 1
     fi
     echo $((NUM1 / NUM2)) ;;
+  average) echo $(((NUM1 + NUM2) / 2)) ;;
   *) echo "Unknown operator: $OP" >&2; exit 1 ;;
 esac
-
