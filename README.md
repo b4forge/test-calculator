@@ -22,3 +22,4 @@ Note: Use `x` for multiplication (not `*`) to avoid shell glob expansion.
 
 - `calc.sh` — Main script, evaluates `<num1> <op> <num2>`
 - `test.sh` — Test runner (exit 0 = pass, exit 1 = fail)
+# E2E atlas review test (1774730069)
