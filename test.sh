@@ -41,8 +41,16 @@ check "3" 3.4 round      # Round to integer (default N=0)
 check "4" 3.5 round      # Round to integer (half rounds up)
 check "3.14" 3.14159 round 2  # Round to 2 decimal places
 
+# Modulo tests
+check "1" 10 % 3        # positive operands
+check "0" 7 % 7         # zero result
+check "0" 0 % 5         # zero dividend
+check "-1" -7 % 3       # negative dividend (shell remainder semantics)
+check "1" 7 % -3        # negative divisor (shell remainder semantics)
+
 # Error handling
 check_error 1 "division by zero" 10 / 0
+check_error 1 "division by zero" 5 % 0
 
 echo "Tests: $PASS passed, $FAIL failed"
 [[ $FAIL -eq 0 ]]
