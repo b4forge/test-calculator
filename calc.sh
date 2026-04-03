@@ -2,8 +2,8 @@
 # calc.sh — Simple integer calculator.
 # Usage: calc.sh <num1> <op> [<num2>]
 # Supported operators: + - x / square cube average round
-# BUG: no division-by-zero check
-# BUG: no modulo support
+# Integer math uses bash arithmetic expansion; very large values may overflow
+# according to the shell's native integer behavior.
 set -euo pipefail
 
 NUM1="$1"; OP="$2";

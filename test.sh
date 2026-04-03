@@ -35,6 +35,8 @@ check "10" 20 - 10
 check "42" 6 x 7
 check "3" 10 / 3
 check "125" 5 cube
+check "0" 0 cube
+check "-27" -3 cube
 check "5" 4 average 6    # (4 + 6) / 2 = 5
 check "7" 10 average 5   # (10 + 5) / 2 = 7 (integer division)
 check "3" 3.4 round      # Round to integer (default N=0)
