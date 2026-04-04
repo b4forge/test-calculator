@@ -30,6 +30,7 @@ check_error() {
   fi
 }
 
+check "calc.sh v1.0.0" --version
 check "5" 2 + 3
 check "10" 20 - 10
 check "42" 6 x 7

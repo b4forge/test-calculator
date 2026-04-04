@@ -6,6 +6,11 @@
 # BUG: no modulo support
 set -euo pipefail
 
+if [[ "${1:-}" == "--version" ]]; then
+  echo "calc.sh v1.0.0"
+  exit 0
+fi
+
 NUM1="$1"; OP="$2";
 
 if [ "$OP" = "square" ]; then
